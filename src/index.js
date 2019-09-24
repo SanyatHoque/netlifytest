@@ -7,6 +7,8 @@ import LoginComponent from './Login/login';
 import SignupComponent from './Signup/signup';
 import DashboardComponent from './Dashboard/dashboard';
 import { Link } from 'react-router-dom';
+import App from './App';
+import logo from './logo.svg';
 
 const firebase = require("firebase");
 require("firebase/firestore"); // Required for side-effects?????
@@ -24,16 +26,23 @@ firebase.initializeApp({
 const routing = (
   <Router>
     <div id='routing-container'>
+    <div className="App">
+      {/* <header className="App-header"> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <Link className={SignupComponent} to='/signup'>Welcome to the Chatting App. Sign Up if your not signed in bro!</Link>
+      {/* </header> */}
+    </div>
       <Route path='/login' component={LoginComponent}></Route>
       <Route path='/signup' component={SignupComponent}></Route>
       <Route path='/dashboard' component={DashboardComponent}></Route>
-      <Link className={SignupComponent} to='/signup'>Not a User ? please Sign Up bro!</Link>
       {/* <Link className={classes.SignupComponent} to='/signup'>Sign Up!</Link> */}
     </div>
   </Router>
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
+
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 
 serviceWorker.unregister();
