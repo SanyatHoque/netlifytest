@@ -26,17 +26,22 @@ class SignupComponent extends React.Component {
   render() {
 
     const { classes } = this.props;
-
+    const styles2 = {
+      backgroundColor: "red",
+      fontFamily: "Times New Roman",
+      fontStyle:"italic",
+      fontSize: "40px"
+    }
     return (
       <main className={classes.main}>
         <CssBaseline/>
         <Paper className={classes.paper}>
-          <Typography component="h1" variant="h5">
+          <Typography style={styles2} component="h1" variant="h5">
             Sign Up!
           </Typography>
           <form onSubmit={(e) => this.submitSignup(e)} className={classes.form}>
             <FormControl required fullWidth margin='normal'>
-              <InputLabel htmlFor='signup-email-input'>Enter Your Email</InputLabel>
+              <InputLabel style={{fontSize: "40px"}} htmlFor='signup-email-input'>Enter Your Email</InputLabel>
               <Input autoComplete='email' autoFocus onChange={(e) => this.userTyping('email', e)} id='signup-email-input'></Input>
             </FormControl>
             <FormControl required fullWidth margin='normal'>
