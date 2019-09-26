@@ -31,18 +31,24 @@ const styles2 = {
 }
 const routing = (
   <Router>
+    <Route path="/" exact strict render={
+    ()=>{
+     return (
     <div id='routing-container'>
     <div className="App">
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <Link className={SignupComponent} style={styles2} to='/signup'>Welcome to the Chatting App. Sign Up if your not signed in bro!</Link>
+        <Link className={SignupComponent} style={styles2} to='/signup'>Welcome to the Chatting App bro! Click here to enter!</Link>
       {/* </header> */}
     </div>
-      <Route path='/login' component={LoginComponent}></Route>
-      <Route path='/signup' component={SignupComponent}></Route>
+    </div>)
+      }
+    }/> 
+      <Route path='/login' exact strict component={LoginComponent}></Route>
+      <Route path='/signup' exact strict component={SignupComponent}></Route>
       <Route path='/dashboard' component={DashboardComponent}></Route>
       {/* <Link className={classes.SignupComponent} to='/signup'>Sign Up!</Link> */}
-    </div>
+
   </Router>
 );
 

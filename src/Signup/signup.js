@@ -30,7 +30,7 @@ class SignupComponent extends React.Component {
       backgroundColor: "red",
       fontFamily: "Times New Roman",
       fontStyle:"italic",
-      fontSize: "40px"
+      // fontSize: "40px"
     }
     return (
       <main className={classes.main}>
@@ -41,7 +41,8 @@ class SignupComponent extends React.Component {
           </Typography>
           <form onSubmit={(e) => this.submitSignup(e)} className={classes.form}>
             <FormControl required fullWidth margin='normal'>
-              <InputLabel style={{fontSize: "40px"}} htmlFor='signup-email-input'>Enter Your Email</InputLabel>
+              <InputLabel //style={{fontSize: "40px"}} 
+              htmlFor='signup-email-input'>Enter Your Email</InputLabel>
               <Input autoComplete='email' autoFocus onChange={(e) => this.userTyping('email', e)} id='signup-email-input'></Input>
             </FormControl>
             <FormControl required fullWidth margin='normal'>
