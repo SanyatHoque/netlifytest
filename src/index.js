@@ -32,7 +32,7 @@ const styles2 = {
   margin: "0",
   // background: "yellow",
   position: "absolute",
-  top: "50%",
+  top: "70%",
   left: "50%",
   marginRight: "-50%",
   transform: "translate(-50%, -50%)" 
@@ -45,7 +45,7 @@ const styles3 = {
   margin: "0",
   background: "yellow",
   position: "absolute",
-  top: "70%",
+  top: "90%",
   left: "50%",
   marginRight: "-50%",
   transform: "translate(-50%, -50%)" 
@@ -54,7 +54,7 @@ const styles4 = {
   margin: "0",
   position: "absolute",
   top: "-10%",
-  left: "22%",
+  left: "20%",
   marginRight: "-50%",
   transform: "translate(-50%, -50%)",
   transform: "scale(0.8,0.8)"
