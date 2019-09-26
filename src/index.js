@@ -54,7 +54,7 @@ const styles4 = {
   margin: "0",
   position: "absolute",
   top: "-10%",
-  left: "18%",
+  left: "19%",
   marginRight: "-50%",
   transform: "translate(-50%, -50%)",
   transform: "scale(0.8,0.8)"
