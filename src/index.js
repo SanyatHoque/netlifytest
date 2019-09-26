@@ -24,10 +24,30 @@ firebase.initializeApp({
   appId: "1:487750415909:web:c539d931dbe696cfe4b1cc"
 });
 const styles2 = {
-  backgroundColor: "red",
+  backgroundColor: "orange",
   fontFamily: "Times New Roman",
   fontStyle:"italic",
-  fontSize: "40px"
+  fontSize: "40px",
+  margin: "0",
+  // background: "yellow",
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  marginRight: "-50%",
+  transform: "translate(-50%, -50%)" 
+}
+const styles3 = {
+  // backgroundColor: "red",
+  fontFamily: "Times New Roman",
+  fontStyle:"italic",
+  fontSize: "40px",
+  margin: "0",
+  background: "yellow",
+  position: "absolute",
+  top: "70%",
+  left: "50%",
+  marginRight: "-50%",
+  transform: "translate(-50%, -50%)" 
 }
 const routing = (
   <Router>
@@ -38,7 +58,14 @@ const routing = (
     <div className="App">
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <Link className={SignupComponent} style={styles2} to='/signup'>Welcome to the Chatting App bro! Click here to enter!</Link>
+        {/* <ul> */}
+          <li>
+          <Link className={SignupComponent} style={styles2} to='/signup'>Welcome to the Chatting App bro! Click here to enter!</Link>
+          </li>
+          <li>
+          <Link className={SignupComponent} style={styles3} to='/login'>Or simply login if you are my bro!</Link>
+          </li>
+        {/* </ul> */}
       {/* </header> */}
     </div>
     </div>)
