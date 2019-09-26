@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import App from './App';
 import logo from './logo.svg';
 import { fontSize } from '@material-ui/system';
+import teddy from './teddy.jpg'
 
 const firebase = require("firebase");
 require("firebase/firestore"); // Required for side-effects?????
@@ -49,22 +50,28 @@ const styles3 = {
   marginRight: "-50%",
   transform: "translate(-50%, -50%)" 
 }
+const styles4 = {
+  margin: "0",
+  position: "absolute",
+  top: "-10%",
+  left: "22%",
+  marginRight: "-50%",
+  transform: "translate(-50%, -50%)",
+  transform: "scale(0.8,0.8)"
+}
 const routing = (
   <Router>
     <Route path="/" exact strict render={
     ()=>{
      return (
     <div id='routing-container'>
+    <img style={styles4} src={teddy} alt="teddy bear"/>
     <div className="App">
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <ul> */}
-          <li>
           <Link className={SignupComponent} style={styles2} to='/signup'>Welcome to the Chatting App bro! Click here to enter!</Link>
-          </li>
-          <li>
           <Link className={SignupComponent} style={styles3} to='/login'>Or simply login if you are my bro!</Link>
-          </li>
         {/* </ul> */}
       {/* </header> */}
     </div>
